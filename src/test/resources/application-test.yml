@@ -1,0 +1,24 @@
+# src/main/resources/application.yml
+
+server:
+  port: 8080 # Define a default port for the application
+
+spring:
+  application:
+    name: minimal-spring-scala-app
+
+# Optional: Actuator endpoints (health is enabled by default)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info" # Expose health and info endpoints
+  endpoint:
+    health:
+      show-details: always # Show full health details
+
+logging:
+  level:
+    org.springframework: DEBUG # Log Spring framework messages at DEBUG level
+    org.springframework.boot.test: DEBUG # Log Spring Boot test messages at DEBUG level
+    com.example: DEBUG #
